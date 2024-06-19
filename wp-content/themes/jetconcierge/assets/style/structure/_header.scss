@@ -13,16 +13,22 @@
     justify-content: space-between;
     align-items: center;
     height:100px;
-    padding:25px 0;
+    padding:25px auto;
     .off-canvas-menu-trigger{
       display:flex;
       justify-content: flex-start;
       align-items: center;
       width:200px;
+      @include media("<=md") {
+        width:100px;
+      }
       p{
         margin-bottom:0;
         padding-left:7px;
         text-transform: uppercase;
+        @include media("<=md") {
+          font-size:14px;
+        }
       }
       &:hover{
         cursor: pointer;
@@ -39,15 +45,34 @@
       svg{
        // max-height:80px;
         max-width:280px;
+        @include media("<=md") {
+         width:70px;
+        }
+      }
+      .text-logo{
+        @include media("<=md") {
+          display:none;
+         }
+      }
+      .emblem-logo{
+        @include media(">md") {
+          display:none;
+         }
       }
     }
     .contact-link{
       width:200px;
       display:flex;
       justify-content: flex-end;;
+      @include media("<=md") {
+        width:100px;
+      }
       p{
         margin-bottom:0;
         text-transform: uppercase;
+        @include media("<=md") {
+          font-size:14px;
+        }
       }
       &:hover{
         cursor: pointer;
@@ -78,7 +103,12 @@
 .scroll-header{
   .container{
     height:60px;
-    padding:5px 0;
+    padding:5px 15px;
+    > a{
+      svg{
+        width:40px;
+      }
+    }
     .mobile-menu-trigger{
       .btn{
         top:15px;

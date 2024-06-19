@@ -996,6 +996,15 @@ p.btn-ghost:hover a {
   align-items: flex-end;
   justify-content: center;
 }
+@media (max-width: 768px) {
+  .off-canvas-menu .background {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background: #000;
+    background-image: "";
+  }
+}
 .off-canvas-menu .background .plane-container {
   width: 50%;
   height: 100%;
@@ -1005,11 +1014,22 @@ p.btn-ghost:hover a {
   justify-content: space-around;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .off-canvas-menu .background .plane-container {
+    width: 100%;
+    height: 100%;
+  }
+}
 .off-canvas-menu .background .plane-container h3 {
   text-align: center;
   width: 100%;
   text-transform: uppercase;
   padding-top: 100px;
+}
+@media (max-width: 768px) {
+  .off-canvas-menu .background .plane-container h3 {
+    display: none;
+  }
 }
 .off-canvas-menu .background .plane-container .plane-image {
   width: 100%;
@@ -1018,10 +1038,14 @@ p.btn-ghost:hover a {
   object-position: center;
   align-self: flex-start;
 }
+@media (max-width: 768px) {
+  .off-canvas-menu .background .plane-container .plane-image {
+    display: none;
+  }
+}
 .off-canvas-menu .background .plane-container .plane-image-placeholder {
   width: 100%;
   height: 300px;
-  border: 1px solid red;
 }
 .off-canvas-menu .menu-container {
   width: 40%;
@@ -1031,12 +1055,23 @@ p.btn-ghost:hover a {
   padding: 100px;
   position: relative;
   z-index: 2;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .off-canvas-menu .menu-container {
+    min-width: auto;
+    width: 100%;
+    padding: 25px;
+    height: 80%;
+  }
 }
 .off-canvas-menu .menu-container .close-menu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   color: #FFF;
+  position: relative;
+  z-index: 3;
 }
 .off-canvas-menu .menu-container .close-menu p {
   margin-bottom: 0;
@@ -1054,6 +1089,8 @@ p.btn-ghost:hover a {
   flex-direction: column;
   align-items: flex-end;
   text-transform: uppercase;
+  position: relative;
+  z-index: 3;
 }
 .off-canvas-menu .menu-container .fleet-menu h5 {
   margin-top: 50px;
@@ -1096,6 +1133,14 @@ p.btn-ghost:hover a {
 }
 .off-canvas-menu .menu-container .fleet-menu p.active:after {
   width: 100%;
+}
+.off-canvas-menu .menu-container .video-background {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
 }
 
 .change-plane .title {
@@ -1271,7 +1316,7 @@ p.btn-ghost:hover a {
   justify-content: space-between;
   align-items: center;
   height: 100px;
-  padding: 25px 0;
+  padding: 25px auto;
 }
 .site-header .container .off-canvas-menu-trigger {
   display: flex;
@@ -1279,10 +1324,20 @@ p.btn-ghost:hover a {
   align-items: center;
   width: 200px;
 }
+@media (max-width: 768px) {
+  .site-header .container .off-canvas-menu-trigger {
+    width: 100px;
+  }
+}
 .site-header .container .off-canvas-menu-trigger p {
   margin-bottom: 0;
   padding-left: 7px;
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .site-header .container .off-canvas-menu-trigger p {
+    font-size: 14px;
+  }
 }
 .site-header .container .off-canvas-menu-trigger:hover {
   cursor: pointer;
@@ -1299,14 +1354,39 @@ p.btn-ghost:hover a {
 .site-header .container > a svg {
   max-width: 280px;
 }
+@media (max-width: 768px) {
+  .site-header .container > a svg {
+    width: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .site-header .container > a .text-logo {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .site-header .container > a .emblem-logo {
+    display: none;
+  }
+}
 .site-header .container .contact-link {
   width: 200px;
   display: flex;
   justify-content: flex-end;
 }
+@media (max-width: 768px) {
+  .site-header .container .contact-link {
+    width: 100px;
+  }
+}
 .site-header .container .contact-link p {
   margin-bottom: 0;
   text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .site-header .container .contact-link p {
+    font-size: 14px;
+  }
 }
 .site-header .container .contact-link:hover {
   cursor: pointer;
@@ -1327,7 +1407,10 @@ p.btn-ghost:hover a {
 }
 .scroll-header .container {
   height: 60px;
-  padding: 5px 0;
+  padding: 5px 15px;
+}
+.scroll-header .container > a svg {
+  width: 40px;
 }
 .scroll-header .container .mobile-menu-trigger .btn {
   top: 15px;
@@ -1370,7 +1453,7 @@ p.btn-ghost:hover a {
 @media (max-width: 768px) {
   .site-footer .logo-navigation .container .logo .emblem-logo {
     height: auto;
-    width: 20%;
+    width: 15%;
   }
 }
 .site-footer .logo-navigation .container .logo .text-logo {
@@ -1378,7 +1461,7 @@ p.btn-ghost:hover a {
 }
 @media (max-width: 768px) {
   .site-footer .logo-navigation .container .logo .text-logo {
-    width: 70%;
+    width: 60%;
     height: auto;
   }
 }
@@ -1579,12 +1662,15 @@ p.btn-ghost:hover a {
   align-items: center;
   color: #FFF;
 }
+.single-plane main .prev-next-plan-links .prev-link a:hover, .single-plane main .prev-next-plan-links .next-link a:hover {
+  text-decoration: none;
+}
 .single-plane .off-canvas-specs {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   background-color: #000;
   z-index: 9999;
   display: none;
@@ -1595,12 +1681,23 @@ p.btn-ghost:hover a {
   position: relative;
   z-index: 3;
 }
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .close-bar {
+    background-color: #000;
+  }
+}
 .single-plane .off-canvas-specs .close-bar .container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: #000;
   height: 150px;
+}
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .close-bar .container {
+    height: 75px;
+    color: #FFF;
+  }
 }
 .single-plane .off-canvas-specs .close-bar .container .close-button {
   display: flex;
@@ -1623,17 +1720,37 @@ p.btn-ghost:hover a {
   padding-bottom: 120px;
   color: #FFF;
 }
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery {
+    padding-top: 35px;
+  }
+}
 .single-plane .off-canvas-specs .specifications-gallery .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery .container {
+    flex-direction: column;
+  }
+}
 .single-plane .off-canvas-specs .specifications-gallery .specification-features {
   width: 50%;
+}
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery .specification-features {
+    width: 100%;
+  }
 }
 .single-plane .off-canvas-specs .specifications-gallery .specification-features .specifications {
   margin-bottom: 30px;
   max-width: 350px;
+}
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery .specification-features .specifications {
+    max-width: none;
+  }
 }
 .single-plane .off-canvas-specs .specifications-gallery .specification-features .specifications > p {
   color: #c8c7c3;
@@ -1673,8 +1790,18 @@ p.btn-ghost:hover a {
   width: 50%;
   position: relative;
 }
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery .gallery-container {
+    width: 100%;
+  }
+}
 .single-plane .off-canvas-specs .specifications-gallery .gallery-container .gallery img {
   max-width: 100%;
+}
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery .gallery-container .gallery {
+    display: none;
+  }
 }
 .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full {
   position: absolute;
@@ -1688,8 +1815,22 @@ p.btn-ghost:hover a {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full {
+    position: relative;
+    width: auto;
+  }
+  .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full:after {
+    content: "View Gallery";
+  }
+}
 .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full i {
   font-size: 20px;
+}
+@media (max-width: 768px) {
+  .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full i {
+    margin-right: 7px;
+  }
 }
 .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full:hover {
   cursor: pointer;
@@ -1707,6 +1848,7 @@ p.btn-ghost:hover a {
   height: 100%;
   z-index: 9999999;
   display: none;
+  background-color: #000;
 }
 .gallery-full-screen .close-full {
   position: absolute;
@@ -1727,16 +1869,12 @@ p.btn-ghost:hover a {
   cursor: pointer;
 }
 .error404 .page-content {
-  height: 500px;
+  height: 100vh;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-}
-.error404 .page-content svg {
-  width: 120px;
-  height: auto;
-  margin-bottom: 25px;
+  color: white;
 }
 .error404 .flex-content {
   border-top: 1px solid #FFF;
@@ -1758,6 +1896,9 @@ p.btn-ghost:hover a {
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 100px;
+}
+.home .page-content .btn {
+  margin-right: 0;
 }
 .home .page-content .image-gallery-slider {
   width: 100vw;

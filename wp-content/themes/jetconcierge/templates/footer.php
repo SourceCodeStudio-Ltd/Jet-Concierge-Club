@@ -22,7 +22,7 @@
   </div>
   <div class="legal-footer">
     <div class="container">
-      <p class="accreditation">&copy; Jet Concierge Club - All rights reserved - Created by <a href="https://www.sourcecodestudio.co.uk">SourceCodeStudio</a></p>
+      <p class="accreditation">&copy; Jet Concierge Club - All rights reserved - <span class="accred-container">Created by <a href="https://www.sourcecodestudio.co.uk">SourceCodeStudio</a></span></p>
       <p class="legal-menu"><a href="/terms-conditions">Terms & Conditions</a><a href="/privicy-policy">Privacy & Cookies Policy</a></p>
     </div>
   </div>

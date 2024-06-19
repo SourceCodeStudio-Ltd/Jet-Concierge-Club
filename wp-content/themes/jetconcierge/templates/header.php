@@ -6,7 +6,12 @@
     </div>
     <?php //$img = get_field('site_logo', 'options'); ?>
     <a href="<?php echo get_home_url(); ?>">
+    <div class="text-logo">
       <?php get_template_part('/assets/img/jet-con-full-text.svg'); ?>
+    </div>
+    <div class="emblem-logo">
+          <?php get_template_part('/assets/img/jcc-icon.svg'); ?>
+    </div> 
     </a>
     <div class="contact-link">
       <p><span>Contact</span></p>
