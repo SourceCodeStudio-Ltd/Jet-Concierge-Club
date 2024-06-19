@@ -1,0 +1,88 @@
+//////////////////////////////////////////////////////////////////////
+// Header Area
+//////////////////////////////////////////////////////////////////////
+.site-header{
+  width:100%;
+  @include breakout();
+  position: fixed;
+  z-index: 260;
+  border-bottom:1px solid #eee;
+  color:$secondary;
+  .container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:100px;
+    padding:25px 0;
+    .off-canvas-menu-trigger{
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+      width:200px;
+      p{
+        margin-bottom:0;
+        padding-left:7px;
+        text-transform: uppercase;
+      }
+      &:hover{
+        cursor: pointer;
+        p{
+          padding-left:15px;
+        }
+      }
+    }
+    > a{
+      flex-grow:2;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      svg{
+       // max-height:80px;
+        max-width:280px;
+      }
+    }
+    .contact-link{
+      width:200px;
+      display:flex;
+      justify-content: flex-end;;
+      p{
+        margin-bottom:0;
+        text-transform: uppercase;
+      }
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .desktop-menu{
+      @include media("<=md") {
+        display:none;
+      }
+      .desktop-nav{
+        ul{
+          display:flex;
+          padding-left:0;
+          list-style: none;
+          margin-bottom:0;
+          li{
+            margin-left:25px;
+            a{
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.scroll-header{
+  .container{
+    height:60px;
+    padding:5px 0;
+    .mobile-menu-trigger{
+      .btn{
+        top:15px;
+      }
+    }
+  }
+}

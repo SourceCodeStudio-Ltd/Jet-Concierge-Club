@@ -1,0 +1,228 @@
+.single-plane{
+    background-image: linear-gradient(to bottom, #c8c7c3 69%, #656565)!important;
+    main{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h1{
+            text-align: center;
+            color:$primary;
+        }
+        .plane-image-container{
+            position: relative;
+            img{
+                width:100%;
+                height:auto;
+                margin:20px auto;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                bottom:15px;
+                left:0;
+                width:100%;
+                height:10px;
+                border-radius:100%;
+                background-color:$primary;
+                opacity: 0.05;
+                box-shadow: 0 0 10px 5px rgba(0,0,0,0.3);
+                //-webkit-mask: radial-gradient(circle, #0000 150px, rgba(0, 0, 0, 0.9) 160px);
+                backdrop-filter:blur(100px);
+            }
+            
+        }
+        .button-group{
+            margin-top:50px;
+        }
+        .prev-next-plan-links{
+            width:100%;
+            z-index: 0;
+            .prev-link{
+                left:0;
+                
+            }
+            .next-link{
+                
+                right:0;
+                
+            }
+            .prev-link, .next-link{
+                height:50px;
+                width:50px;
+                border:1px solid $secondary;
+                position: absolute;
+                top:50%;
+                a{
+                    display:flex;
+                    height:50px;
+                    justify-content: center;
+                    align-items: center;
+                    color:$secondary;
+                }
+            }
+        }
+    }
+    
+    .off-canvas-specs{
+        position: fixed;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background-color:$primary;
+        z-index: 9999;
+        display:none;
+        .close-bar{
+            width:100%;
+            
+            background-color:$offwhite;
+            position: relative;
+            z-index: 3;
+            .container{
+                display:flex;
+                justify-content: flex-end;
+                align-items: center;
+                color:$primary;
+                height:150px;
+                .close-button{
+                    display:flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    p{
+                        margin-bottom:0;
+                        text-transform: uppercase;
+                        padding-left:7px;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        p{
+                            padding-left:15px;
+        
+                        }
+                    }
+                }
+            }
+        }
+        .specifications-gallery{
+            padding-top:120px;
+            padding-bottom:120px;
+            color:$secondary;
+            .container{
+                display:flex;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            h3{
+
+            }
+            .specification-features{
+                width:50%;
+                .specifications{
+                    margin-bottom:30px;
+                    max-width:350px;
+                    > p{
+                        color:$offwhite;
+                    }
+                    .spec-container{
+                        border:1px solid $secondary;
+                        padding:5px;
+                        display:flex;
+                        padding:12px;
+                        .icon{
+                            margin-right:12px;
+                            width:35px;
+                            padding-top:5px;
+                            i{
+                                font-size:30px;
+                            }
+                        }
+                        p{
+                            margin-bottom:0;
+                            &:first-of-type{
+                                color:$offwhite;
+                            }
+                        }
+                    }
+                }
+                .features{
+                    display:flex;
+                    flex-wrap: wrap;
+                    .feature-container{
+                        width:50%;
+                        p{
+                            &:first-of-type{
+                                color:$offwhite;
+                                margin-bottom:0;
+                            }
+                        }
+                    }
+                }
+            }
+            .gallery-container{
+                width:50%;
+                position: relative;
+                .gallery{
+                    img{
+                        max-width:100%;
+                    }
+                    
+                }
+                .view-full{
+                    position: absolute;
+                    bottom:0;
+                    right:0;
+                    width:50px;
+                    height:50px;
+                    border:1px solid $secondary;
+                    z-index: 999;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    i{
+                        font-size:20px;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        background-color:$secondary;
+                        i{
+                            color:$primary;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+.gallery-full-screen{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: 9999999;
+    display:none;
+    .close-full{
+        position: absolute;
+        top:0;
+        left:0;
+        width:50px;
+        height:50px;
+        border:1px solid $secondary;
+        z-index: 999;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        i{
+            font-size:20px;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    .gallery{
+
+    }
+}

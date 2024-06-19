@@ -1,0 +1,57 @@
+.home{
+    .page-content{
+        height:100vh;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom:100px;
+        // .btn{
+        //     position: absolute;
+        //     bottom:0;
+        // }
+        .image-gallery-slider{
+            @include breakout();
+            position: fixed;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            .slide-container{
+                height:100vh;
+                overflow: hidden;
+                position: relative;
+                img{
+                    width:120%;
+                    height:120%;
+                    object-fit: cover;
+                    position: absolute;
+                    left:-10%;
+                    top:0;
+                    animation: image-slide 10s infinite alternate ease-in-out;
+                }
+                &:before{
+                    content:'';
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    background-color:rgba(#000,.5);
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+
+/* The animation code */
+@keyframes image-slide {
+    from {
+        height:100%;
+        left:-10%;
+    }
+    to {
+        height:105%;
+        left:0%;;
+    }
+  }

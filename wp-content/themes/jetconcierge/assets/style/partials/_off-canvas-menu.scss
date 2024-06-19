@@ -1,0 +1,151 @@
+.off-canvas-menu{
+    width:100%;
+    height:100%;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index: 9999;
+    display:none;
+    .background{
+        background-image: linear-gradient(to bottom, #c8c7c3 69%, #656565);
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index: 1;
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        .plane-container{
+            width:50%;
+            height:100%;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            overflow: hidden;
+            h3{
+                text-align: center;
+                width:100%;
+                text-transform: uppercase;
+                padding-top:100px;
+            }
+            .plane-image{
+                width:100%;
+                height:300px;
+                object-fit: contain;
+                object-position: center;
+                align-self: flex-start;
+            }
+            .plane-image-placeholder{
+                width:100%;
+                height:300px;
+                border:1px solid red;
+            }
+        }
+    }
+    .menu-container{
+        width:40%;
+        min-width:620px;
+        background-color:$primary;
+        height:100%;
+        padding:100px;
+        position: relative;
+        z-index: 2;
+        .close-menu{
+            display:flex;
+            justify-content: flex-start;
+            align-items: center;
+            color:$secondary;
+            p{
+                margin-bottom:0;
+                text-transform: uppercase;
+                padding-left:7px;
+            }
+            &:hover{
+                cursor: pointer;
+                p{
+                    padding-left:15px;
+
+                }
+            }
+        }
+        .fleet-menu{
+            display:flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-transform: uppercase;
+            h5{
+                margin-top:50px;
+                margin-bottom:60px;
+                color:$secondary;
+            }
+            p{
+                font-size:14px;
+                position: relative;
+                &:after{
+                    content:'';
+                    position: absolute;
+                    left:0;
+                    bottom:0;
+                    height:2px;
+                    width:0%;
+                    background-color:white;
+                    @include transition(0.5s);
+                }
+                &:hover{
+                    cursor: pointer;
+                    &:after{
+                        width:100%;
+                    }
+                }
+                span{
+                    color:$offwhite;
+                    &:hover{
+                        text-decoration: none;
+                        color:$secondary;
+                        cursor: pointer;
+                    }
+                }
+                &.active{
+                    color:$secondary;
+                    &:after{
+                        width:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.change-plane{
+    .title{
+        animation-name: fadeAndMove;
+        animation-duration: 2.2s;
+    }
+    .plane-image{
+        animation-name: fadeAndMove;
+        animation-duration: 2.5s;
+    }
+}
+
+  @keyframes fadeAndMove{
+    0% {
+        opacity:1;
+        margin-top:0;
+    }
+    25% {
+        opacity:0;
+        margin-top:0px;
+    }
+    70%{
+        opacity:0;
+        margin-top:50px;
+    }
+    95%{
+        opacity:1;
+        margin-top:0;
+    }
+  }

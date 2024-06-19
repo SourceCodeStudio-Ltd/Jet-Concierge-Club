@@ -1,0 +1,156 @@
+//////////////////////////////////////////////////////////////////////
+// Footer Area
+//////////////////////////////////////////////////////////////////////
+
+.site-footer{
+  width:100%;
+  @include breakout();
+  border-top:1px solid $secondary;
+  .logo-navigation{
+    padding:25px 0;
+    .container{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      @include media("<=md") {
+        flex-direction: column;
+      }
+      .logo{
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        @include media("<=md") {
+          justify-content:center;
+        }
+        .emblem-logo{
+          height:72px;
+          margin-right:15px;
+          @include media("<=md") {
+            height:auto;
+            //margin-right:0;
+            width:20%;
+          }
+        }
+        .text-logo{
+          height:22px;
+          @include media("<=md") {
+            width:70%;
+            height:auto;
+          }
+        }
+        svg{
+          height:100%;
+          width:auto;
+          @include media("<=md") {
+            width:100%;
+            height:auto;
+          }
+        }
+      }
+    }
+    .footer-menu{
+      display:flex;
+      justify-content: flex-start;
+      align-items: center;
+      list-style: none;
+      padding-left:0;
+      margin-bottom:0;
+      @include media("<=md") {
+        flex-direction: column;
+        
+      }
+      .off-canvas-menu-trigger{
+        display:flex;
+        justify-content: flex-end;
+        align-items: center;
+        p{
+          margin-bottom:0;
+          padding-left:7px;
+          text-transform: uppercase;
+          color:$secondary;
+          @include media("<=md") {
+            padding-left:0;
+            margin-top:50px;
+            font-size:14px;
+          }
+        }
+        &:hover{
+          cursor: pointer;
+          p{
+            padding-left:15px;
+          }
+        }
+      }
+      .contact-link{
+        display:flex;
+        justify-content: flex-end;
+        margin-left:25px;
+        @include media("<=md") {
+          margin-left:0;
+        }
+        p{
+          margin-bottom:0;
+          text-transform: uppercase;
+          color:$secondary;
+          @include media("<=md") {
+            margin-top:50px;
+            margin-bottom:50px;
+            font-size:14px;
+          }
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .legal-footer{
+    padding-top:25px;
+    padding-bottom:25px;
+    border-top:1px solid $secondary;
+    width:100%;
+    font-size:13px;
+    .container{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      @include media("<=md") {
+        flex-direction: column-reverse;
+      }
+    }
+    p{
+      color:$offwhite;
+      a{
+        color:$offwhite;
+      }
+    }
+    .accreditation{
+      @include media("<=sm") {
+        margin-top:15px;
+        text-align: center;
+      }
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      @include media("<=md") {
+        flex-direction: column;
+      }
+      a{
+        text-decoration: underline;
+        margin-left:5px;
+        &:hover{
+          color:$secondary;
+        }
+      }
+    }
+    .legal-menu{
+      a{
+        padding-left:15px;
+        &:hover{
+          color:$secondary;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
