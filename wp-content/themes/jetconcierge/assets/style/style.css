@@ -1343,7 +1343,7 @@ p.btn-ghost:hover a {
   cursor: pointer;
 }
 .site-header .container .off-canvas-menu-trigger:hover p {
-  padding-left: 15px;
+  color: #ccc;
 }
 .site-header .container > a {
   flex-grow: 2;
@@ -1390,6 +1390,7 @@ p.btn-ghost:hover a {
 }
 .site-header .container .contact-link:hover {
   cursor: pointer;
+  color: #ccc;
 }
 @media (max-width: 768px) {
   .site-header .container .desktop-menu {
@@ -1408,9 +1409,6 @@ p.btn-ghost:hover a {
 .scroll-header .container {
   height: 60px;
   padding: 5px 15px;
-}
-.scroll-header .container > a svg {
-  width: 40px;
 }
 .scroll-header .container .mobile-menu-trigger .btn {
   top: 15px;
@@ -1578,7 +1576,6 @@ p.btn-ghost:hover a {
 }
 .site-footer .legal-footer .accreditation a {
   text-decoration: underline;
-  margin-left: 5px;
 }
 .site-footer .legal-footer .accreditation a:hover {
   color: #FFF;
@@ -1599,6 +1596,8 @@ p.btn-ghost:hover a {
 }
 .wrapper main {
   min-height: 100vh;
+  padding-bottom: 50px;
+  color: white;
 }
 
 .single-plane {
@@ -1883,6 +1882,7 @@ p.btn-ghost:hover a {
 .page-header {
   padding-top: 150px;
   text-align: center;
+  padding-bottom: 100px;
 }
 .page-header h1 {
   color: #FFF;

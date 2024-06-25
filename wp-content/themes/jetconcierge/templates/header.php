@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header animate__animated animate__fadeInDown">
   <div class="container">
     <div class="off-canvas-menu-trigger">
       <i class="fa-solid fa-bars"></i>

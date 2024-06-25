@@ -6,7 +6,7 @@ add_action( 'after_setup_theme', 'gutenberg_css' );
 function gutenberg_css(){
 	add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
   add_editor_style( '/assets/bootstrap/bootstrap.css' ); // tries to include style-editor.css directly from your theme folder
-	add_editor_style( '/assets/style/style.css' ); // tries to include style-editor.css directly from your theme folder
+	//add_editor_style( '/assets/style/style.css' ); // tries to include style-editor.css directly from your theme folder
 }
 
 
@@ -30,7 +30,7 @@ function hide_editor() {
   // if($template_file == 'my-page-template.php'){ // the filename of the page template
   //   remove_post_type_support('page', 'editor');
   // }
-  remove_post_type_support('page', 'editor');
+  //remove_post_type_support('page', 'editor');
   
 }
 
