@@ -26,6 +26,13 @@
   if($nextpost){
     $nxt = get_permalink($nextpost->ID); 
     ?>
+  <?php
+  }
+  else{
+    $planes = get_posts(array('post_type' => 'plane', 'orderby' => 'menu', 'order' => 'ASC', 'fields' => 'ids', 'posts_per_page'  => 1));
+    $nxt = get_permalink($planes[0]);
+  }
+  if($nxt){ ?>
     <div class="next-link">
       <a href="<?= $nxt; ?>"><i class="fa-solid fa-arrow-right"></i></a>
     </div>
@@ -34,12 +41,17 @@
   $prevpost = get_adjacent_post(false,'',true);
   if($prevpost){
     $pre = get_permalink($prevpost->ID);
-    ?>
+  } 
+  else{
+    $planes = get_posts(array('post_type' => 'plane', 'orderby' => 'menu', 'order' => 'DESC', 'fields' => 'ids', 'posts_per_page'  => 1));
+    $pre = get_permalink($planes[0]);
+  }
+  if($pre){ ?>
     <div class="prev-link">
       <a href="<?= $pre; ?>"><i class="fa-solid fa-arrow-left"></i></a>
     </div>
   <?php
-  } ?>
+  }?>
  
 </div>
 
@@ -48,8 +60,10 @@
     <div class="close-bar">
         <div class="container">
             <div class="close-button">
-                <i class="fa-solid fa-xmark"></i>
-                <p>Close</p>
+              <div class="icon-container">
+                  <?php get_template_part('/assets/img/icons/close-cross.svg'); ?>
+              </div>
+              <p>Close</p>
             </div>
         </div>
     </div>
@@ -133,7 +147,14 @@
  if($gallery){ ?>
   <div class="gallery-full-screen">
     <div class="close-full"><i class="fa-solid fa-maximize"></i></div>
-
+    <div class="gallery-controls">
+      <div class="prev">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+      <div class="next">
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
     <div class="gallery">
       <?php
       foreach($gallery as $img){ ?>

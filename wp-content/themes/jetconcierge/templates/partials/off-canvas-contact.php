@@ -1,8 +1,10 @@
-<div class="off-canvas-contact">
+<div class="off-canvas-contact" style="background-image:url('/wp-content/themes/jetconcierge/assets/img/JetCon-background.gif');">
     <div class="close-bar">
         <div class="container">
             <div class="close-button">
-                <i class="fa-solid fa-xmark"></i>
+                <div class="icon-container">
+                    <?php get_template_part('/assets/img/icons/close-cross.svg'); ?>
+                </div>
                 <p>Close</p>
             </div>
         </div>
@@ -25,8 +27,5 @@
                 <?= do_shortcode('[forminator_form id="66"]'); ?>
             </div>
         </div>
-    </div>
-    <div class="background">
-    <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/937665584?h=bbda980d37&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="JCC-WallpaperVideo_Vimeo"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
     </div>
 </div>

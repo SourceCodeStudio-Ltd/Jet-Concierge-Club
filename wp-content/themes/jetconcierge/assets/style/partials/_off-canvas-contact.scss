@@ -8,6 +8,7 @@
     display:none;
     background-color:$primary;
     overflow-y: scroll;
+    background-size: cover;
     .background{
         position: absolute;
         top:0;
@@ -31,16 +32,30 @@
                 display:flex;
                 justify-content: flex-start;
                 align-items: center;
+                .icon-container{
+                    width:50px;
+                    height:50px;
+                    border:1px solid $primary;
+                    display:flex;
+                    justify-content: center;
+                    align-items: center;
+                    svg{
+                        *{
+                            stroke:$primary!important;
+                        }
+                    }
+                }
                 p{
                     margin-bottom:0;
                     text-transform: uppercase;
-                    padding-left:7px;
+                    padding-left:15px;
                 }
                 &:hover{
                     cursor: pointer;
-                    p{
-                        padding-left:15px;
-    
+                    .icon-container{
+                        svg{
+                            transform: scale(1.2);
+                        }
                     }
                 }
             }

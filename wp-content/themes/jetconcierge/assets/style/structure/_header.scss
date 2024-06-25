@@ -22,6 +22,11 @@
       @include media("<=md") {
         width:100px;
       }
+      i{
+        @include media("<=md") {
+          display:none;
+        }
+      }
       p{
         margin-bottom:0;
         padding-left:7px;
@@ -29,6 +34,7 @@
         @include media("<=md") {
           font-size:14px;
         }
+        
       }
       &:hover{
         cursor: pointer;
@@ -73,6 +79,7 @@
         text-transform: uppercase;
         @include media("<=md") {
           font-size:14px;
+          padding-right:7px;
         }
       }
       &:hover{
@@ -107,9 +114,12 @@
     height:60px;
     padding:5px 15px;
     > a{
-      svg{
-        //width:40px;
+      @include media("<=md") {
+        svg{
+          //width:50px;
+        }
       }
+      
     }
     .mobile-menu-trigger{
       .btn{

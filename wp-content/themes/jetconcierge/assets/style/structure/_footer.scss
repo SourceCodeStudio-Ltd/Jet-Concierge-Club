@@ -78,6 +78,9 @@
           cursor: pointer;
           p{
             padding-left:15px;
+            @include media("<=md") {
+              padding-left:0;
+            }
           }
         }
       }

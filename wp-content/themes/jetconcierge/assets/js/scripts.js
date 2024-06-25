@@ -41,7 +41,6 @@
 				$('.off-canvas-contact').slideUp();
 			});
 
-			$(".off-canvas-contact iframe")[0].src += '?' + "autoplay=1&background=1&muted=1&loop=1";
 
 			/////////////////////////////////////////////////////////////////////////////////
 			// Plane Menu Functions
@@ -94,6 +93,7 @@
 			/////////////////////////////////////////////////////////////////////////////////
 
 			$('.specification-trigger').click(function(e) {
+				alert('hello');
 				$('.off-canvas-specs').slideDown();
 			});
 
@@ -181,11 +181,13 @@
 			});
 
 			$('.gallery-full-screen .gallery').slick({
-				infinite: false,
+				infinite: true,
 				autoplay: true,
 				autoplaySpeed: 7500,
 				slidesToShow:1,
-				arrows:false,
+				arrows:true,
+				prevArrow: $('.gallery-controls .prev'),
+				nextArrow: $('.gallery-controls .next'),
 				dots:false,
 				fade: true,
   				cssEase: 'ease-in-out',

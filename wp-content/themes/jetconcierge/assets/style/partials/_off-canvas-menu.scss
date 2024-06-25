@@ -19,10 +19,12 @@
         align-items: center;
         justify-content: center;
         @include media("<=md") {
-            position:relative;
+            //position:relative;
             width:100%;
             height:20%;
-            background:$primary;
+            top:auto;
+            bottom:0;
+            background:transparent;
             background-image:'';
         }
         .plane-container{
@@ -93,11 +95,12 @@
         position: relative;
         z-index: 2;
         overflow:hidden;
+        background-size: cover;
         @include media("<=md") {
            min-width:auto;
            width:100%;
            padding:25px;
-           height:80%;
+           height:100%;
         }
         .close-menu{
             display:flex;
@@ -109,18 +112,27 @@
             .icon-container{
                 width:50px;
                 height:50px;
+                border:1px solid white;
+                display:flex;
+                justify-content: center;
+                align-items: center;
             }
             p{
                 margin-bottom:0;
                 text-transform: uppercase;
-                padding-left:7px;
+                padding-left:14px;
+                font-size:14px;
                 
             }
             &:hover{
                 cursor: pointer;
                 p{
-                    padding-left:15px;
-
+                    //padding-left:15px;
+                }
+                .icon-container{
+                    svg{
+                        transform: scale(1.2);
+                    }
                 }
             }
         }
@@ -174,15 +186,6 @@
                     }
                 }
             }
-        }
-        .video-background{
-            //transform: rotate(90deg);
-            position: absolute;
-            left:0;
-            height:100vh;
-            width:100vw;
-            top:0;
-            z-index: 1;
         }
     }
 }
