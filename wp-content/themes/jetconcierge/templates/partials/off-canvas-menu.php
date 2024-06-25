@@ -1,7 +1,9 @@
 <div class="off-canvas-menu">
     <div class="menu-container">
         <div class="close-menu">
-            <i class="fa-solid fa-xmark"></i>
+            <div class="icon-container">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
             <p>Close</p>
         </div>
         <div class="fleet-menu">
@@ -27,8 +29,11 @@
     <div class="background">
         <div class="plane-container">
             <h3 class="title">Test Title</h3>
-            <img class="plane-image" src="" alt=""/>
-            <p class="btn"><a href="">Discover</a></p>
+            <div class="plane-image-container">
+                <img class="plane-image" src="" alt=""/>
+            </div>
+            
+            <p class="btn"><a href="">Discover<i class="fa-solid fa-arrow-right"></i></a></p>
         </div>
     </div>
 </div>

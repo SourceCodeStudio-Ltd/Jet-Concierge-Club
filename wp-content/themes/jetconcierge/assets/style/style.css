@@ -599,9 +599,22 @@ p.btn a, p.btn span {
   text-transform: uppercase;
   font-size: 14px;
 }
-p.btn:hover a {
+p.btn a i, p.btn span i {
+  margin-left: 0px;
+  opacity: 0;
+  width: 0;
+}
+p.btn:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+p.btn:hover a, p.btn:hover span {
   color: #FFF;
+  padding-right: 30px;
   text-decoration: none;
+}
+p.btn:hover a i, p.btn:hover span i {
+  opacity: 1;
+  margin-left: 10px;
 }
 
 p.btn-second {
@@ -986,14 +999,14 @@ p.btn-ghost:hover a {
 .off-canvas-menu .background {
   background-image: linear-gradient(to bottom, #c8c7c3 69%, #656565);
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
-  width: 100%;
+  width: 60%;
   height: 100%;
-  z-index: 1;
+  z-index: 4;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 }
 @media (max-width: 768px) {
@@ -1006,7 +1019,7 @@ p.btn-ghost:hover a {
   }
 }
 .off-canvas-menu .background .plane-container {
-  width: 50%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1031,25 +1044,44 @@ p.btn-ghost:hover a {
     display: none;
   }
 }
-.off-canvas-menu .background .plane-container .plane-image {
+.off-canvas-menu .background .plane-container .plane-image-container {
+  position: relative;
   width: 100%;
-  height: 300px;
-  object-fit: contain;
-  object-position: center;
+}
+.off-canvas-menu .background .plane-container .plane-image-container .plane-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: left;
   align-self: flex-start;
+  padding-left: 50px;
+  position: relative;
+  z-index: 3;
 }
 @media (max-width: 768px) {
-  .off-canvas-menu .background .plane-container .plane-image {
+  .off-canvas-menu .background .plane-container .plane-image-container .plane-image {
     display: none;
   }
 }
+.off-canvas-menu .background .plane-container .plane-image-container:after {
+  content: "";
+  width: 100%;
+  height: 25px;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  border-radius: 100%;
+  filter: blur(15px);
+  z-index: 2;
+}
 .off-canvas-menu .background .plane-container .plane-image-placeholder {
   width: 100%;
-  height: 300px;
+  height: 400px;
 }
 .off-canvas-menu .menu-container {
   width: 40%;
-  min-width: 620px;
   background-color: #000;
   height: 100%;
   padding: 100px;
@@ -1072,6 +1104,10 @@ p.btn-ghost:hover a {
   color: #FFF;
   position: relative;
   z-index: 3;
+}
+.off-canvas-menu .menu-container .close-menu .icon-container {
+  width: 50px;
+  height: 50px;
 }
 .off-canvas-menu .menu-container .close-menu p {
   margin-bottom: 0;
@@ -1096,10 +1132,12 @@ p.btn-ghost:hover a {
   margin-top: 50px;
   margin-bottom: 60px;
   color: #FFF;
+  text-align: right;
 }
 .off-canvas-menu .menu-container .fleet-menu p {
   font-size: 14px;
   position: relative;
+  text-align: right;
 }
 .off-canvas-menu .menu-container .fleet-menu p:after {
   content: "";
@@ -1117,9 +1155,6 @@ p.btn-ghost:hover a {
 .off-canvas-menu .menu-container .fleet-menu p:hover {
   cursor: pointer;
 }
-.off-canvas-menu .menu-container .fleet-menu p:hover:after {
-  width: 100%;
-}
 .off-canvas-menu .menu-container .fleet-menu p span {
   color: #c8c7c3;
 }
@@ -1128,11 +1163,8 @@ p.btn-ghost:hover a {
   color: #FFF;
   cursor: pointer;
 }
-.off-canvas-menu .menu-container .fleet-menu p.active {
+.off-canvas-menu .menu-container .fleet-menu p.active span {
   color: #FFF;
-}
-.off-canvas-menu .menu-container .fleet-menu p.active:after {
-  width: 100%;
 }
 .off-canvas-menu .menu-container .video-background {
   position: absolute;
@@ -1145,9 +1177,14 @@ p.btn-ghost:hover a {
 
 .change-plane .title {
   animation-name: fadeAndMove;
-  animation-duration: 2.2s;
+  animation-duration: 2.5s;
 }
-.change-plane .plane-image {
+.change-plane .plane-image-container {
+  animation-name: fadeAndMoveLeft;
+  animation-duration: 2.5s;
+  transition-timing-function: ease-in-out;
+}
+.change-plane .btn {
   animation-name: fadeAndMove;
   animation-duration: 2.5s;
 }
@@ -1168,6 +1205,24 @@ p.btn-ghost:hover a {
   95% {
     opacity: 1;
     margin-top: 0;
+  }
+}
+@keyframes fadeAndMoveLeft {
+  0% {
+    opacity: 1;
+    padding-left: 0;
+  }
+  25% {
+    opacity: 0;
+    padding-left: 100%;
+  }
+  60% {
+    opacity: 0;
+    padding-left: 100%;
+  }
+  100% {
+    opacity: 1;
+    padding-left: 50px;
   }
 }
 .off-canvas-contact {
@@ -1601,11 +1656,11 @@ p.btn-ghost:hover a {
 }
 
 .single-plane {
-  background-image: linear-gradient(to bottom, #c8c7c3 69%, #656565) !important;
+  background-image: linear-gradient(to bottom, #c8c7c3 39%, #656565) !important;
 }
 .single-plane main {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -1618,21 +1673,23 @@ p.btn-ghost:hover a {
 }
 .single-plane main .plane-image-container img {
   width: 100%;
-  height: auto;
-  margin: 20px auto;
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
 }
 .single-plane main .plane-image-container:after {
   content: "";
-  position: absolute;
-  bottom: 15px;
-  left: 0;
   width: 100%;
-  height: 10px;
+  height: 25px;
+  background-color: black;
+  opacity: 0.5;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
   border-radius: 100%;
-  background-color: #000;
-  opacity: 0.05;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(100px);
+  filter: blur(15px);
+  z-index: 2;
 }
 .single-plane main .button-group {
   margin-top: 50px;
@@ -1663,6 +1720,9 @@ p.btn-ghost:hover a {
 }
 .single-plane main .prev-next-plan-links .prev-link a:hover, .single-plane main .prev-next-plan-links .next-link a:hover {
   text-decoration: none;
+}
+.single-plane main .prev-next-plan-links .prev-link:hover, .single-plane main .prev-next-plan-links .next-link:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .single-plane .off-canvas-specs {
   position: fixed;
@@ -1734,6 +1794,10 @@ p.btn-ghost:hover a {
     flex-direction: column;
   }
 }
+.single-plane .off-canvas-specs .specifications-gallery h3 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
 .single-plane .off-canvas-specs .specifications-gallery .specification-features {
   width: 50%;
 }
@@ -1770,9 +1834,13 @@ p.btn-ghost:hover a {
 }
 .single-plane .off-canvas-specs .specifications-gallery .specification-features .specifications .spec-container p {
   margin-bottom: 0;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 .single-plane .off-canvas-specs .specifications-gallery .specification-features .specifications .spec-container p:first-of-type {
   color: #c8c7c3;
+  font-size: 13px;
+  text-transform: capitalize;
 }
 .single-plane .off-canvas-specs .specifications-gallery .specification-features .features {
   display: flex;
@@ -1780,6 +1848,9 @@ p.btn-ghost:hover a {
 }
 .single-plane .off-canvas-specs .specifications-gallery .specification-features .features .feature-container {
   width: 50%;
+}
+.single-plane .off-canvas-specs .specifications-gallery .specification-features .features .feature-container p {
+  font-size: 15px;
 }
 .single-plane .off-canvas-specs .specifications-gallery .specification-features .features .feature-container p:first-of-type {
   color: #c8c7c3;

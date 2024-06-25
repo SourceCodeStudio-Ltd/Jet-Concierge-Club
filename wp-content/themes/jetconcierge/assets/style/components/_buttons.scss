@@ -20,11 +20,22 @@ p.btn{
     z-index: 10;
     text-transform: uppercase;
     font-size:14px;
+    i{
+      margin-left:0px;
+      opacity:0;
+      width:0;
+    }
   }
   &:hover{
-    a{
+    background-color:rgba(#000,0.75);
+    a, span{
       color:$secondary;
+      padding-right:30px;
       text-decoration: none;
+      i{
+        opacity:1;
+        margin-left:10px;
+      }
     }
   }
 }

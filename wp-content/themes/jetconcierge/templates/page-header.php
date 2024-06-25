@@ -1,5 +1,5 @@
 <section class="page-header">
-  <h1>
+  <h1 class="animate__animated animate__fadeIn">
     <?php
     if(is_home()){
       echo 'News';

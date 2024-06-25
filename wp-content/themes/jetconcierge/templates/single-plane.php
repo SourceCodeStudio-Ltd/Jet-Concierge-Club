@@ -6,17 +6,17 @@
  $tour = get_field('virtual_tour_link'); ?>
  
 <?php get_template_part('templates/page-header'); ?>
-<div class="plane-image-container">
+<div class="plane-image-container animate__animated animate__fadeInRight">
   <img class="plane-image" src="<?= $img['url']; ?>" alt="<?= $img['alt']; ?>"/>
 </div>
 
-<div class="button-group">
+<div class="button-group animate__animated animate__fadeInUp">
  <?php if($specs OR $features){ ?>
-  <p class="btn specification-trigger"><span>Specifications</span></p>
+  <p class="btn specification-trigger"><span>Specifications<i class="fa-solid fa-arrow-right"></i></span></p>
   <?php 
  } ?>
  <?php if($tour){ ?>
-  <p class="btn"><a target="_blank" href="<?= $tour; ?>">Virtual Tour</a></p>
+  <p class="btn"><a target="_blank" href="<?= $tour; ?>">Virtual Tour<i class="fa-solid fa-arrow-right"></i></a></p>
   <?php 
  } ?>
 </div>

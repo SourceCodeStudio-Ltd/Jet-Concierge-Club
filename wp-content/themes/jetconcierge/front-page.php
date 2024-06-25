@@ -12,7 +12,7 @@
 				<?php
 				} ?>
 			</div>
-			<p class="btn discover animate__animated animate__fadeInUp"><span>Discover The Fleet</span></a>
+			<p class="btn discover animate__animated animate__fadeInUp"><span>Discover The Fleet<i class="fa-solid fa-arrow-right"></i></span></a>
 		</section>
 	</main>
 <?php get_footer(); ?>
