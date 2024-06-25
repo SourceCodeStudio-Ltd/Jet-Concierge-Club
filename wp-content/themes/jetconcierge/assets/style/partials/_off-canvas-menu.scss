@@ -94,7 +94,7 @@
         padding:100px;
         position: relative;
         z-index: 2;
-        overflow:hidden;
+        overflow-y:scroll;
         background-size: cover;
         @include media("<=md") {
            min-width:auto;
@@ -153,6 +153,9 @@
                 font-size:14px;
                 position: relative;
                 text-align: right;
+                @include media("<=md") {
+                    margin-bottom:20px;
+                }
                 &:after{
                     content:'';
                     position: absolute;

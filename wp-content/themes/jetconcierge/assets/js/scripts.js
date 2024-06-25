@@ -85,7 +85,6 @@
 					$('.background .plane-container').removeClass('change-plane');
 				}, 2100);
 				
-				
 			});
 
 			/////////////////////////////////////////////////////////////////////////////////
@@ -93,7 +92,6 @@
 			/////////////////////////////////////////////////////////////////////////////////
 
 			$('.specification-trigger').click(function(e) {
-				alert('hello');
 				$('.off-canvas-specs').slideDown();
 			});
 

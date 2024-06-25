@@ -1088,7 +1088,7 @@ p.btn-ghost:hover a {
   padding: 100px;
   position: relative;
   z-index: 2;
-  overflow: hidden;
+  overflow-y: scroll;
   background-size: cover;
 }
 @media (max-width: 768px) {
@@ -1145,6 +1145,11 @@ p.btn-ghost:hover a {
   font-size: 14px;
   position: relative;
   text-align: right;
+}
+@media (max-width: 768px) {
+  .off-canvas-menu .menu-container .fleet-menu p {
+    margin-bottom: 20px;
+  }
 }
 .off-canvas-menu .menu-container .fleet-menu p:after {
   content: "";
@@ -1225,7 +1230,7 @@ p.btn-ghost:hover a {
 }
 .off-canvas-contact {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
@@ -1249,12 +1254,24 @@ p.btn-ghost:hover a {
   position: relative;
   z-index: 3;
 }
+@media (max-width: 768px) {
+  .off-canvas-contact .close-bar {
+    background-color: transparent;
+  }
+}
 .off-canvas-contact .close-bar .container {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   color: #000;
   height: 150px;
+}
+@media (max-width: 768px) {
+  .off-canvas-contact .close-bar .container {
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 50px;
+  }
 }
 .off-canvas-contact .close-bar .container .close-button {
   display: flex;
@@ -1269,13 +1286,28 @@ p.btn-ghost:hover a {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .off-canvas-contact .close-bar .container .close-button .icon-container {
+    border-color: #FFF;
+  }
+}
 .off-canvas-contact .close-bar .container .close-button .icon-container svg * {
   stroke: #000 !important;
+}
+@media (max-width: 768px) {
+  .off-canvas-contact .close-bar .container .close-button .icon-container svg * {
+    stroke: #FFF !important;
+  }
 }
 .off-canvas-contact .close-bar .container .close-button p {
   margin-bottom: 0;
   text-transform: uppercase;
   padding-left: 15px;
+}
+@media (max-width: 768px) {
+  .off-canvas-contact .close-bar .container .close-button p {
+    color: #FFF;
+  }
 }
 .off-canvas-contact .close-bar .container .close-button:hover {
   cursor: pointer;
@@ -1295,6 +1327,12 @@ p.btn-ghost:hover a {
   padding-top: 100px;
   padding-bottom: 60px;
 }
+@media (max-width: 768px) {
+  .off-canvas-contact .contact-area .container {
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
 .off-canvas-contact .contact-area .container .contact-details {
   color: #FFF;
   display: flex;
@@ -1302,10 +1340,22 @@ p.btn-ghost:hover a {
   justify-content: flex-start;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .off-canvas-contact .contact-area .container .contact-details {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
 .off-canvas-contact .contact-area .container .contact-details h3 {
   text-transform: uppercase;
   font-size: 37px;
   margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .off-canvas-contact .contact-area .container .contact-details h3 {
+    text-align: center;
+  }
 }
 .off-canvas-contact .contact-area .container .contact-details > p {
   color: #c8c7c3;
@@ -1314,12 +1364,30 @@ p.btn-ghost:hover a {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+@media (max-width: 768px) {
+  .off-canvas-contact .contact-area .container .contact-details > .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .off-canvas-contact .contact-area .container .contact-details > .button-group .btn {
+    margin-right: 0;
+  }
+}
 .off-canvas-contact .contact-area .container .contact-details .location {
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   flex-direction: column;
   color: #c8c7c3;
+}
+@media (max-width: 768px) {
+  .off-canvas-contact .contact-area .container .contact-details .location {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 35px;
+  }
 }
 .off-canvas-contact .contact-area .container .contact-details .location h6 {
   text-transform: uppercase;
@@ -1332,9 +1400,15 @@ p.btn-ghost:hover a {
   margin-bottom: 0;
 }
 .off-canvas-contact .form-container {
-  min-width: 480px;
-  background-color: #000;
+  width: 480px;
+  background-color: #1e1e1e;
   border: 1px solid #FFF;
+}
+@media (max-width: 768px) {
+  .off-canvas-contact .form-container {
+    min-width: none;
+    width: 100%;
+  }
 }
 .off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps {
   display: none !important;
@@ -1364,6 +1438,32 @@ p.btn-ghost:hover a {
   border-radius: 0 !important;
   height: 100px !important;
   text-transform: uppercase !important;
+}
+.off-canvas-contact .form-container .forminator-ui .forminator-field-radio > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.off-canvas-contact .form-container .forminator-ui .forminator-field-radio > div label {
+  margin: 0 !important;
+  border: 1px solid #FFF;
+  flex-grow: 2;
+  width: 50%;
+  height: 50px;
+}
+.off-canvas-contact .form-container .forminator-ui .forminator-radio input ~ .forminator-radio-label {
+  width: 100%;
+  height: 100%;
+  margin-left: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.off-canvas-contact .form-container .forminator-ui .forminator-radio input:checked ~ .forminator-radio-label {
+  background-color: #000 !important;
+}
+.off-canvas-contact .form-container .forminator-ui .forminator-radio .forminator-radio-bullet {
+  display: none !important;
 }
 
 .site-header {
