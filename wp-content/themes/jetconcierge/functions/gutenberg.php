@@ -14,8 +14,8 @@ function gutenberg_css(){
 add_action( 'admin_init', 'hide_editor' );
 function hide_editor() {
   // Get the Post ID.
-  //$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-  // if( !isset( $post_id ) ) return;
+  $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+  if( !isset( $post_id ) ) return;
 
   // // Hide the editor on the page titled 'Homepage'
   // $pagename = get_the_title($post_id);
@@ -31,7 +31,11 @@ function hide_editor() {
   //   remove_post_type_support('page', 'editor');
   // }
   //remove_post_type_support('page', 'editor');
-  
+   // Hide the editor on the page titled 'Homepage'
+  $pagename = get_the_title($post_id);
+  if($pagename == 'Home'){
+    remove_post_type_support('page', 'editor');
+  }
 }
 
 // Remove Comments From Menu Section
@@ -44,3 +48,5 @@ function my_remove_admin_menus() {
 add_filter('use_block_editor_for_post', '__return_false', 10);
 
 ?>
+
+

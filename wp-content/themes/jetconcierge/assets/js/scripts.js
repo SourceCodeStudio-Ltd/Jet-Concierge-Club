@@ -158,7 +158,8 @@
 			$('.image-gallery-slider').slick({
 				infinite: false,
 				autoplay: true,
-				autoplaySpeed: 7500,
+				autoplaySpeed: 7000,
+				speed: 7000,
 				slidesToShow:1,
 				arrows:false,
 				dots:false,

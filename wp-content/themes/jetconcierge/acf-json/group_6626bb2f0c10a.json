@@ -3,22 +3,6 @@
     "title": "PAGE: Home",
     "fields": [
         {
-            "key": "field_6626bb2f7effa",
-            "label": "Call To Action",
-            "name": "call_to_action",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_6626bb7a17a5e",
             "label": "Gallery",
             "name": "gallery",
@@ -65,5 +49,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715664597
+    "modified": 1719388770
 }

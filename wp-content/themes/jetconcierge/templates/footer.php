@@ -1,4 +1,4 @@
-<footer class="site-footer  animate__animated animate__fadeInUp" role="contentinfo">
+<footer class="site-footer " role="contentinfo">
   
   <div class="logo-navigation">
     <div class="container">
