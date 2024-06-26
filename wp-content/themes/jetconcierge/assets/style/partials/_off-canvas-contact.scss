@@ -220,11 +220,20 @@
             
             .forminator-radio input:checked ~ 
             .forminator-radio-label {    
-                background-color: $primary !important;
+                background-color: $secondary !important;
+                color:$primary!important;
             }
             
             .forminator-radio .forminator-radio-bullet{
                 display: none !important;
+            }
+            .select2-selection--single{
+                background-color:transparent!important;
+                color:$secondary!important;
+                border:1px solid $secondary!important;
+            }
+            .select2-selection__rendered{
+                color:$secondary!important;
             }
         }
     }

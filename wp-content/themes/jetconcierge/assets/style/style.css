@@ -1465,10 +1465,19 @@ p.btn-ghost:hover a {
   align-items: center;
 }
 .off-canvas-contact .form-container .forminator-ui .forminator-radio input:checked ~ .forminator-radio-label {
-  background-color: #000 !important;
+  background-color: #FFF !important;
+  color: #000 !important;
 }
 .off-canvas-contact .form-container .forminator-ui .forminator-radio .forminator-radio-bullet {
   display: none !important;
+}
+.off-canvas-contact .form-container .forminator-ui .select2-selection--single {
+  background-color: transparent !important;
+  color: #FFF !important;
+  border: 1px solid #FFF !important;
+}
+.off-canvas-contact .form-container .forminator-ui .select2-selection__rendered {
+  color: #FFF !important;
 }
 
 .site-header {
