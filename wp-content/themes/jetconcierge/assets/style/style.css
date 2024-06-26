@@ -1090,6 +1090,11 @@ p.btn-ghost:hover a {
   z-index: 2;
   overflow-y: scroll;
   background-size: cover;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.off-canvas-menu .menu-container::-webkit-scrollbar {
+  display: none;
 }
 @media (max-width: 768px) {
   .off-canvas-menu .menu-container {
@@ -1755,6 +1760,9 @@ p.btn-ghost:hover a {
 }
 .site-footer .legal-footer .accreditation a:hover {
   color: #FFF;
+}
+.site-footer .legal-footer .accreditation span {
+  margin-left: 5px;
 }
 .site-footer .legal-footer .legal-menu a {
   padding-left: 15px;
