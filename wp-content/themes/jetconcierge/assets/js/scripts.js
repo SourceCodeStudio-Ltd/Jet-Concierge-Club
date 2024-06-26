@@ -164,7 +164,6 @@
 				arrows:false,
 				dots:false,
 				fade: true,
-  				cssEase: 'ease-in-out'
 			});
 
 			$('.gallery-container .gallery').slick({
