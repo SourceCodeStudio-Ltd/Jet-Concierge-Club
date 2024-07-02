@@ -1416,7 +1416,10 @@ p.btn-ghost:hover a {
   }
 }
 .off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps {
-  display: none !important;
+  padding-top: 30px;
+}
+.off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps .forminator-break:before {
+  background-color: #FFF !important;
 }
 .off-canvas-contact .form-container .forminator-ui .forminator-pagination--content {
   padding: 30px 30px 0 30px;
@@ -1804,7 +1807,7 @@ p.btn-ghost:hover a {
 }
 .single-plane main h1 {
   text-align: center;
-  color: #000;
+  color: #444;
 }
 .single-plane main .plane-image-container {
   position: relative;

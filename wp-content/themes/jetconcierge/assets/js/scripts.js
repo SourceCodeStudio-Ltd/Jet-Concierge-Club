@@ -158,12 +158,13 @@
 			$('.image-gallery-slider').slick({
 				infinite: false,
 				autoplay: true,
-				autoplaySpeed: 4500,
-				speed: 4500,
+				autoplaySpeed: 3500,
+				speed: 3500,
 				slidesToShow:1,
 				arrows:false,
 				dots:false,
 				fade: true,
+				pauseOnHover:false,
 			});
 
 			$('.gallery-container .gallery').slick({

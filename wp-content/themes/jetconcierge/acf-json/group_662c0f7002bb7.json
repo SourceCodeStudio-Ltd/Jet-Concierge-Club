@@ -8,7 +8,7 @@
             "name": "plane",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Recommended Size:1600px width. Recommended Files Type: PNG.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -235,5 +235,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1714165977
+    "modified": 1719415359
 }

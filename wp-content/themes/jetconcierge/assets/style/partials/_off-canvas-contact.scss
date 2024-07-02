@@ -163,7 +163,11 @@
         //padding:30px;
         .forminator-ui{
             .forminator-pagination-steps{
-                display:none!important;
+                //display:none!important;
+                padding-top:30px;
+                .forminator-break:before {
+                    background-color:$secondary!important;
+                }
             }
             .forminator-pagination--content{
                 padding:30px 30px 0 30px;
