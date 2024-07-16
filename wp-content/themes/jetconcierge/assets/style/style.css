@@ -2200,7 +2200,7 @@ p.btn-ghost:hover a {
 }
 body {
   background-color: #000 !important;
-  font-family: Futura !important;
+  font-family: futura-pt, sans-serif !important;
 }
 
 html {
