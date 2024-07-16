@@ -15,8 +15,8 @@
                 <h3>Contact the Club</h3>
                 <p>Send us an enquiry or speak to one of our team through email or phone.</p>
                 <div class="button-group">
-    <p class="btn"><a href=""><?= get_field('email_address', 7); ?></a></p>
-    <p class="btn"><a href=""><?= get_field('telephone_number', 7); ?></a></p>
+    <p class="btn"><a href="mailto:<?= get_field('email_address', 7); ?>"><?= get_field('email_address', 7); ?></a></p>
+    <p class="btn"><a href="tel:<?= get_field('telephone_number', 7); ?>"><?= get_field('telephone_number', 7); ?></a></p>
 </div>
                 <div class="location">
                     <h6>Located</h6>

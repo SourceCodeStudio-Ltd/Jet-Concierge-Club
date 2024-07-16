@@ -26,7 +26,7 @@
                     position: absolute;
                     left:-10%;
                     top:0;
-                    animation: image-slide 120s infinite alternate ease-in-out;
+                    animation: image-slide 60s infinite alternate ease-in-out;
                 }
                 &:before{
                     content:'';
@@ -49,7 +49,7 @@
         transform: scale(1);
     }
     50%{
-        transform: scale(2);
+        transform: scale(1.15);
     }
     100%{
         transform: scale(1);

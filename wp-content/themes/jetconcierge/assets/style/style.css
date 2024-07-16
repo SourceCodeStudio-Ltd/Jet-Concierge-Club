@@ -1482,6 +1482,9 @@ p.btn-ghost:hover a {
 .off-canvas-contact .form-container .forminator-ui .select2-selection__rendered {
   color: #FFF !important;
 }
+.off-canvas-contact .form-container .forminator-ui .forminator-required {
+  color: #FFF !important;
+}
 
 .site-header {
   width: 100%;
@@ -2173,7 +2176,7 @@ p.btn-ghost:hover a {
   position: absolute;
   left: -10%;
   top: 0;
-  animation: image-slide 120s infinite alternate ease-in-out;
+  animation: image-slide 60s infinite alternate ease-in-out;
 }
 .home .page-content .image-gallery-slider .slide-container:before {
   content: "";
@@ -2192,7 +2195,7 @@ p.btn-ghost:hover a {
     transform: scale(1);
   }
   50% {
-    transform: scale(2);
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);
