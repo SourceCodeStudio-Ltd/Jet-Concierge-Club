@@ -1418,6 +1418,17 @@ p.btn-ghost:hover a {
 .off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps {
   padding-top: 30px;
 }
+@media (max-width: 768px) {
+  .off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps .forminator-break {
+    height: 10px !important;
+  }
+}
 .off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps .forminator-break:before {
   background-color: #FFF !important;
 }
@@ -2060,6 +2071,7 @@ p.btn-ghost:hover a {
 .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full:hover {
   cursor: pointer;
   background-color: #FFF;
+  color: #000;
 }
 .single-plane .off-canvas-specs .specifications-gallery .gallery-container .view-full:hover i {
   color: #000;
@@ -2104,6 +2116,12 @@ p.btn-ghost:hover a {
   left: 75px;
   z-index: 99;
 }
+@media (max-width: 768px) {
+  .gallery-full-screen .gallery-controls {
+    left: 0;
+    width: 100%;
+  }
+}
 .gallery-full-screen .gallery-controls .prev, .gallery-full-screen .gallery-controls .next {
   border: 1px solid white;
   height: 50px;
@@ -2117,8 +2135,20 @@ p.btn-ghost:hover a {
   cursor: pointer;
 }
 .gallery-full-screen .gallery {
-  max-height: 100%;
   overflow-y: hidden;
+  height: 85vh;
+}
+@media (max-width: 768px) {
+  .gallery-full-screen .gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.gallery-full-screen .gallery .slick-track img {
+  height: 85vh;
+  object-fit: contain;
+  object-position: center;
 }
 
 .error404 .page-content {
@@ -2204,6 +2234,9 @@ p.btn-ghost:hover a {
 body {
   background-color: #000 !important;
   font-family: futura-pt, sans-serif !important;
+}
+body.terms-conditions .site-header, body.privacy-policy .site-header {
+  background-color: #000;
 }
 
 html {

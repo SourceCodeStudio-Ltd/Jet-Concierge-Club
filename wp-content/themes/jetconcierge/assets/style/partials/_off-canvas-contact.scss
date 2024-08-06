@@ -165,6 +165,17 @@
             .forminator-pagination-steps{
                 //display:none!important;
                 padding-top:30px;
+                @include media("<=md") {
+                    display:flex!important;
+                    justify-content: center;
+                }
+                
+                .forminator-break{
+                    @include media("<=md") {
+                        height:10px!important;
+                    }
+                    
+                }
                 .forminator-break:before {
                     background-color:$secondary!important;
                 }

@@ -146,7 +146,7 @@
  $gallery = get_field('plane_gallery'); 
  if($gallery){ ?>
   <div class="gallery-full-screen">
-    <div class="close-full"><i class="fa-solid fa-maximize"></i></div>
+    <div class="close-full"><i class="fas fa-window-close"></i></div>
     <div class="gallery-controls">
       <div class="prev">
         <i class="fa-solid fa-arrow-left"></i>

@@ -249,6 +249,7 @@
                     &:hover{
                         cursor: pointer;
                         background-color:$secondary;
+                        color:$primary;
                         i{
                             color:$primary;
                         }
@@ -270,6 +271,7 @@
     display:none;
     background-color:$primary;
     padding:75px;
+   
     .close-full{
         position: absolute;
         top:0;
@@ -297,6 +299,10 @@
         top:calc(50% - 25px);
         left:75px;
         z-index: 99;
+        @include media("<=md") {
+            left:0;
+            width:100%; 
+        }
         .prev, .next{
             border:1px solid white;
             height:50px;
@@ -311,7 +317,19 @@
         }
     }
     .gallery{
-        max-height:100%;
         overflow-y: hidden;
+        height:85vh;
+        @include media("<=md") {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slick-track{
+            img{
+                height:85vh;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
     }
 }

@@ -34,6 +34,13 @@ $offwhite: #c8c7c3;
 body{
     background-color:$primary!important;
     font-family: futura-pt, sans-serif!important;
+
+    &.terms-conditions, &.privacy-policy{
+        .site-header{
+            background-color:$primary;
+        }
+    }
+    
 }
 
 html{
