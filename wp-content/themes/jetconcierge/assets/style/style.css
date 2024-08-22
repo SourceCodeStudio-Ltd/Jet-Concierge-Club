@@ -1833,6 +1833,12 @@ p.btn-ghost:hover a {
   object-position: center;
   margin: 0 auto;
 }
+@media (max-width: 768px) {
+  .single-plane main .plane-image-container img {
+    height: auto;
+    object-position: bottom;
+  }
+}
 .single-plane main .plane-image-container:after {
   content: "";
   width: 100%;

@@ -17,6 +17,10 @@
                 object-fit: contain;
                 object-position: center;
                 margin:0 auto;
+                @include media("<=md") {
+                    height:auto;
+                    object-position: bottom;
+                }
             }
             &:after{
                 content:'';
