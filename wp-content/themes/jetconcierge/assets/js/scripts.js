@@ -56,34 +56,45 @@
 			$(".background .plane-container .plane-image").attr("alt",planeAlt);
 			$(".background .plane-container .btn a").attr("href",planeLink);
 
-			
+			var checkSize  = function() {
+				return $(window).width() >=768
+			}
 			$('.off-canvas-menu .fleet-menu .plane-label').click(function(e) {
+				
+				if (checkSize()) {
+					var planeTitle = $(this).data('plane-title');
+					var planeUrl = $(this).data("plane-url");
+					var planeAlt = $(this).data("plane-alt");
+					var planeLink = $(this).data("plane-link");
+					$('.plane-label').removeClass('active');
+					$(this).addClass('active');
+					$('.background .plane-container').addClass('change-plane');
+					setTimeout(function() {
+						$(".background .plane-container .plane-image").attr("src",'');
+						$(".background .plane-container .plane-image").attr("alt",'');
+						
+						$(".background .plane-container .title").text(planeTitle);
+						$(".background .plane-container .plane-image").attr("src",planeUrl);
+						$(".background .plane-container .plane-image").attr("alt",planeAlt);
+						$(".background .plane-container .btn a").attr("href",planeLink);
 
-				var planeTitle = $(this).data('plane-title');
-				var planeUrl = $(this).data("plane-url");
-				var planeAlt = $(this).data("plane-alt");
-				var planeLink = $(this).data("plane-link");
-				$('.plane-label').removeClass('active');
-				$(this).addClass('active');
-				$('.background .plane-container').addClass('change-plane');
-				setTimeout(function() {
-					$(".background .plane-container .plane-image").attr("src",'');
-					$(".background .plane-container .plane-image").attr("alt",'');
-					
-					$(".background .plane-container .title").text(planeTitle);
-					$(".background .plane-container .plane-image").attr("src",planeUrl);
-					$(".background .plane-container .plane-image").attr("alt",planeAlt);
-					$(".background .plane-container .btn a").attr("href",planeLink);
+					if(!planeUrl){
+						$(".background .plane-container .plane-image").attr("src","http://jet-concierge-club.local/wp-content/uploads/2024/06/plane-placeholder.png");
 
-				if(!planeUrl){
-					$(".background .plane-container .plane-image").attr("src","http://jet-concierge-club.local/wp-content/uploads/2024/06/plane-placeholder.png");
+					}
+					}, 1500);
 
+					setTimeout(function() {
+						$('.background .plane-container').removeClass('change-plane');
+					}, 2100);
 				}
-				}, 1500);
-
-				setTimeout(function() {
-					$('.background .plane-container').removeClass('change-plane');
-				}, 2100);
+				else{
+					var planeLink = $(this).data("plane-link");
+					window.location.href = planeLink;
+					
+					//$(".background .plane-container .btn a").attr("href",planeLink);
+					
+				}
 				
 			});
 
@@ -101,10 +112,15 @@
 
 			$('.gallery-container .view-full').click(function(e) {
 				$('.gallery-full-screen').slideDown();
+				setTimeout(function() {
+					$('.gallery-full-screen .gallery').slick('reinit');
+				}, 200);
+				
 			});
 
 			$('.gallery-full-screen .close-full').click(function(e) {
 				$('.gallery-full-screen').slideUp();
+				
 			});
 
 			/////////////////////////////////////////////////////////////////////////////////

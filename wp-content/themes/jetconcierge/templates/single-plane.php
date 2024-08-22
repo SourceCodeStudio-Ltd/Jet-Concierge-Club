@@ -22,29 +22,31 @@
 </div>
 <div class="prev-next-plan-links">
   <?php 
-  $nextpost = get_adjacent_post(false,'',false);
+  $nextpost = get_adjacent_post(false,'',true);
   if($nextpost){
     $nxt = get_permalink($nextpost->ID); 
     ?>
   <?php
   }
   else{
-    $planes = get_posts(array('post_type' => 'plane', 'orderby' => 'menu', 'order' => 'ASC', 'fields' => 'ids', 'posts_per_page'  => 1));
+    $planes = get_posts(array('post_type' => 'plane', 'orderby' => 'menu_order', 'order' => 'DESC', 'fields' => 'ids', 'posts_per_page'  => -1));
     $nxt = get_permalink($planes[0]);
   }
+
   if($nxt){ ?>
     <div class="next-link">
       <a href="<?= $nxt; ?>"><i class="fa-solid fa-arrow-right"></i></a>
     </div>
   <?php
   }
-  $prevpost = get_adjacent_post(false,'',true);
+  $prevpost = get_adjacent_post(false,'',false);
   if($prevpost){
     $pre = get_permalink($prevpost->ID);
   } 
   else{
-    $planes = get_posts(array('post_type' => 'plane', 'orderby' => 'menu', 'order' => 'DESC', 'fields' => 'ids', 'posts_per_page'  => 1));
-    $pre = get_permalink($planes[0]);
+    $planes = get_posts(array('post_type' => 'plane', 'orderby' => 'menu_order', 'order' => 'DESC', 'fields' => 'ids', 'posts_per_page'  => -1));
+    $count = count($planes);
+    $pre = get_permalink($planes[$count - 1]);
   }
   if($pre){ ?>
     <div class="prev-link">

@@ -2088,6 +2088,11 @@ p.btn-ghost:hover a {
   background-color: #000;
   padding: 75px;
 }
+@media (max-width: 768px) {
+  .gallery-full-screen {
+    padding: 75px 0;
+  }
+}
 .gallery-full-screen .close-full {
   position: absolute;
   top: 0;
@@ -2138,13 +2143,6 @@ p.btn-ghost:hover a {
   overflow-y: hidden;
   height: 85vh;
 }
-@media (max-width: 768px) {
-  .gallery-full-screen .gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 .gallery-full-screen .gallery .slick-track img {
   height: 85vh;
   object-fit: contain;
@@ -2158,6 +2156,12 @@ p.btn-ghost:hover a {
   justify-content: center;
   flex-direction: column;
   color: white;
+}
+@media (max-width: 576px) {
+  .error404 .page-content {
+    padding: 0 25px;
+    text-align: center;
+  }
 }
 .error404 .flex-content {
   border-top: 1px solid #FFF;

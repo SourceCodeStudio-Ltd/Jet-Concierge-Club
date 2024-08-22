@@ -271,7 +271,9 @@
     display:none;
     background-color:$primary;
     padding:75px;
-   
+    @include media("<=md") {
+        padding:75px 0;
+    }
     .close-full{
         position: absolute;
         top:0;
@@ -320,9 +322,9 @@
         overflow-y: hidden;
         height:85vh;
         @include media("<=md") {
-            display:flex;
-            justify-content: center;
-            align-items: center;
+            // display:flex;
+            // justify-content: center;
+            // align-items: center;
         }
         .slick-track{
             img{

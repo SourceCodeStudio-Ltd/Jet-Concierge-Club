@@ -10,6 +10,10 @@
     justify-content: center;
     flex-direction:column;
     color:white;
+    @include media("<=sm") {
+      padding:0 25px;
+      text-align: center;
+    }
   }
   .flex-content{
     border-top:1px solid $secondary;
