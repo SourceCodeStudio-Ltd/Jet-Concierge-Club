@@ -1415,6 +1415,9 @@ p.btn-ghost:hover a {
     width: 100%;
   }
 }
+.off-canvas-contact .form-container .forminator-ui .forminator-error-message {
+  color: #F5D2D2;
+}
 .off-canvas-contact .form-container .forminator-ui .forminator-pagination-steps {
   padding-top: 30px;
 }
