@@ -1,4 +1,17 @@
-<header class="site-header animate__animated animate__fadeInDown">
+<?php 
+  $banner = get_field('active', 'options');
+
+if($banner){
+  $date = get_field('incident_date', 'options');
+  $mes = get_field('incident_message', 'options');
+  $bg = get_field('message_bar_colour', 'options');
+  $col = getContrastColor($bg);
+?>
+<div class="incident-banner" style="background-color: <?= $bg; ?>">
+  <p class="content" style="color: <?= $col; ?>"><span class="date"><?= $date; ?></span> - <span class="description"><?= $mes; ?></span></p>
+</div>
+<?php } ?>
+<header class="site-header animate__animated animate__fadeInDown <?php if($banner){ echo 'incident-banner-active'; } ?>">
   <div class="container">
     <div class="off-canvas-menu-trigger">
       <i class="fa-solid fa-bars"></i>

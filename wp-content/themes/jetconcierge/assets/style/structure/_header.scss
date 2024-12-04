@@ -107,6 +107,9 @@
       }
     }
   }
+  &.incident-banner-active{
+    top:40px;
+  }
 }
 
 .scroll-header{
@@ -126,5 +129,24 @@
         top:15px;
       }
     }
+  }
+}
+
+.incident-banner{
+  @include breakout();
+  z-index: 999999;
+  display:flex;
+  justify-content: center;
+  gap:8px;
+  padding:10px;
+  position: fixed;
+  top:0;
+  p{
+    margin:0;
+    text-align: center;
+    font-size:13px;
+  }
+  .date{
+    font-weight:700;
   }
 }

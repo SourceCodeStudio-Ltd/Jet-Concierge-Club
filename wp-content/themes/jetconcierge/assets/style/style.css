@@ -1611,12 +1611,37 @@ p.btn-ghost:hover a {
 .site-header .container .desktop-menu .desktop-nav ul li {
   margin-left: 25px;
 }
+.site-header.incident-banner-active {
+  top: 40px;
+}
+
 .scroll-header .container {
   height: 60px;
   padding: 5px 15px;
 }
 .scroll-header .container .mobile-menu-trigger .btn {
   top: 15px;
+}
+
+.incident-banner {
+  width: 100vw;
+  position: relative;
+  left: calc(-1 * (100vw - 100%) / 2);
+  z-index: 999999;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+}
+.incident-banner p {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+}
+.incident-banner .date {
+  font-weight: 700;
 }
 
 .site-footer {
