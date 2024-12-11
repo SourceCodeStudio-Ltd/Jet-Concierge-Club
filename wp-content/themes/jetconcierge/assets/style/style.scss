@@ -23,6 +23,7 @@ $offwhite: #c8c7c3;
 @import 'structure/_footer';
 @import 'structure/_wrapper';
 @import 'structure/_single-plane';
+@import 'structure/_page-incidents';
 @import 'partials/_error404';
 @import 'partials/_page-header';
 @import 'partials/_homepage.scss';
@@ -34,16 +35,13 @@ $offwhite: #c8c7c3;
 body{
     background-color:$primary!important;
     font-family: futura-pt, sans-serif!important;
-
-    &.terms-conditions, &.privacy-policy{
+    &.terms-conditions, &.privacy-policy, &.incidents{
         .site-header{
             background-color:$primary;
         }
     }
-    
 }
 
 html{
     overflow-x: hidden;
-    
 }

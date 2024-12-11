@@ -39,6 +39,9 @@ function hide_editor() {
   if($pagename == 'Contact'){
     remove_post_type_support('page', 'editor');
   }
+  if($pagename == 'Incidents'){
+    remove_post_type_support('page', 'editor');
+  }
 }
 
 // Remove Comments From Menu Section

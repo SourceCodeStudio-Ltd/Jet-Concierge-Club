@@ -2,13 +2,15 @@
   $banner = get_field('active', 'options');
 
 if($banner){
-  $date = get_field('incident_date', 'options');
-  $mes = get_field('incident_message', 'options');
+  $inc = get_field('incident', 'options');
+  $link = get_permalink($inc);
+  $date = get_field('date_of_incident',  $inc);
+  $mes = get_the_title($inc);
   $bg = get_field('message_bar_colour', 'options');
   $col = getContrastColor($bg);
 ?>
 <div class="incident-banner" style="background-color: <?= $bg; ?>">
-  <p class="content" style="color: <?= $col; ?>"><span class="date"><?= $date; ?></span> - <span class="description"><?= $mes; ?></span></p>
+  <p class="content"><a style="color: <?= $col; ?>" href="/incidents"><span class="date"><?= $date; ?></span> - <span class="description"><?= $mes; ?></span></a></p>
 </div>
 <?php } ?>
 <header class="site-header animate__animated animate__fadeInDown <?php if($banner){ echo 'incident-banner-active'; } ?>">

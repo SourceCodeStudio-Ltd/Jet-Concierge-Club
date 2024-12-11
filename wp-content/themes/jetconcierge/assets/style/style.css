@@ -2183,6 +2183,21 @@ p.btn-ghost:hover a {
   object-position: center;
 }
 
+.page.incidents .incident-container {
+  max-width: 750px;
+  margin: 0 auto;
+  border-bottom: 1px solid #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.page.incidents .incident-container .active {
+  background-color: green;
+  padding: 5px 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
 .error404 .page-content {
   height: 100vh;
   display: flex;
@@ -2273,7 +2288,7 @@ body {
   background-color: #000 !important;
   font-family: futura-pt, sans-serif !important;
 }
-body.terms-conditions .site-header, body.privacy-policy .site-header {
+body.terms-conditions .site-header, body.privacy-policy .site-header, body.incidents .site-header {
   background-color: #000;
 }
 

@@ -97,42 +97,30 @@
             "return_format": "string"
         },
         {
-            "key": "field_6750dfad06288",
-            "label": "Incident Date",
-            "name": "incident_date",
+            "key": "field_6751845777905",
+            "label": "Incident",
+            "name": "incident",
             "aria-label": "",
-            "type": "date_picker",
+            "type": "post_object",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
+                "width": "",
                 "class": "",
                 "id": ""
             },
-            "display_format": "d\/m\/Y",
-            "return_format": "d\/m\/Y",
-            "first_day": 1
-        },
-        {
-            "key": "field_6750df5006287",
-            "label": "Incident Message",
-            "name": "incident_message",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "70",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "post_type": [
+                "incident"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
         }
     ],
     "location": [
@@ -153,5 +141,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1733353801
+    "modified": 1733396811
 }
