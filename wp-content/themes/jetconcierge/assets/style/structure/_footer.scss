@@ -117,7 +117,7 @@
     .container{
       display:flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       @include media("<=md") {
         flex-direction: column-reverse;
       }
