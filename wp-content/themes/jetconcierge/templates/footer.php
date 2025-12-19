@@ -22,7 +22,11 @@
   </div>
   <div class="legal-footer">
     <div class="container">
-      <p class="accreditation">&copy; Jet Concierge Club - All rights reserved - <span class="accred-container">Created by <a target="_blank" href="https://www.sourcecodestudio.co.uk">SourceCodeStudio</a></span></p>
+      <p class="accreditation">Jet Concierge Club is a trading name of Concierge U Limited. Company incorporated in England & Wales.<br/>
+        Company Registration Number: 10781545 Company VAT Reg: 277882443<br/>
+        Concierge U LTD T/A Jet Concierge Club, First Avenue, London Stansted Airport, CM24 1QQ. 
+      </p>
+      <p class="accred-container">Created by <a target="_blank" href="https://www.sourcecodecreative.co.uk">SourceCodeCreative</a></p>
       <p class="legal-menu"><a href="/terms-conditions">Terms & Conditions</a><a href="/privacy-policy">Privacy & Cookies Policy</a></p>
     </div>
   </div>
